@@ -16,7 +16,7 @@ Here is the file structure you can find:
 - *common.yml*: this playbook contains common roles that can be safely applied to all hosts
 - *database.yml*: this playbook contains tasks used only for database servers
 - *webserver.yml*: this playbook contains tasks used only for Web servers
-
+```
 
 If you take a look at the [Ansible best practices](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#alternative-directory-layout), you will see that other folders can also be present if necessary.
 
