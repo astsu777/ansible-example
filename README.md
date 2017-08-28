@@ -9,13 +9,13 @@ Besides, this structure respects the Ansible best-practices.
 Here is the file structure you can find:
 
 ```
-- *inventories*: this folder contains the different environment you can have (development, staging, production, etc...)
-- *roles*: this folder contains all the roles that are applicable for the environments
-- *ansible.cfg*: this file overrides the default Ansible configuration with certain custom values
-- *site.yml*: this is the main playbook file
-- *common.yml*: this playbook contains common roles that can be safely applied to all hosts
-- *database.yml*: this playbook contains tasks used only for database servers
-- *webserver.yml*: this playbook contains tasks used only for Web servers
+- inventories: this folder contains the different environment you can have (development, staging, production, etc...)
+- roles: this folder contains all the roles that are applicable for the environments
+- ansible.cfg: this file overrides the default Ansible configuration with certain custom values
+- site.yml: this is the main playbook file
+- common.yml: this playbook contains common roles that can be safely applied to all hosts
+- database.yml: this playbook contains tasks used only for database servers
+- webserver.yml: this playbook contains tasks used only for Web servers
 ```
 
 If you take a look at the [Ansible best practices](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#alternative-directory-layout), you will see that other folders can also be present if necessary.
