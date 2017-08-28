@@ -20,6 +20,7 @@ Here is the file structure you can find:
 
 If you take a look at the [Ansible best practices](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#alternative-directory-layout), you will see that other folders can also be present if necessary.
 
+
 # Resources
 
 Here are some useful resources you might want to check:
@@ -27,6 +28,8 @@ Here are some useful resources you might want to check:
 - [Ansible Best Practices](http://docs.ansible.com/ansible/latest/playbooks_best_practices.html): useful to always respect the best practices
 - [Ansible Variables Precedence Order](http://docs.ansible.com/ansible/latest/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable): there is an order or priority in which the variables are read. It is good to know this before you define your variables.
 - [Ansible Galaxy](https://galaxy.ansible.com/): good resource to find a lot of playbook and roles example
+
+
 
 # About me
 
