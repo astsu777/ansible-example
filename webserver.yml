@@ -1,0 +1,7 @@
+---
+# Playbook for all Web servers
+- hosts: web_srv
+  user: root
+
+  roles:
+   - { role: nginx, tags: [ 'nginx' ] }

@@ -1,0 +1,5 @@
+---
+# Default playbook
+- include: common.yml
+- include: database.yml
+- include: webserver.yml

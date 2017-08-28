@@ -1,0 +1,5 @@
+---
+# These variables are specific to the development environment
+
+variable1: value1
+variable2: value2

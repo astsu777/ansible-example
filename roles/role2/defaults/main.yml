@@ -1,0 +1,5 @@
+---
+# Default variables for this role. These variables should be overwritten with custom values by the end-user
+
+variable1: value1
+variable2: value2

@@ -1,0 +1,9 @@
+# This file is the inventory of the development environment. 
+[group]
+hostname_or_ip
+
+[db_srv]
+10.2.1.35
+
+[web_srv]
+10.2.1.35

@@ -1,0 +1,9 @@
+---
+# Playbook used by all hosts
+- hosts: all
+  user: "{{ user }}"
+  become: yes
+
+  roles:
+   - { role: role1, tags: [ 'tag1' ] }
+   - { role: role2, tags: [ 'tag1, tag2' ] }

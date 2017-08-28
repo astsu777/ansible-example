@@ -1,0 +1,18 @@
+galaxy_info:
+  author: John Doe
+  description: A small description of this role.
+
+  license: license (MIT, BSD)
+
+  min_ansible_version: 2.3
+
+  platforms:
+   - name: Debian, Red Hat
+     versions:
+     - all
+
+  galaxy_tags:
+    - linux
+    - ansible
+
+dependencies: []

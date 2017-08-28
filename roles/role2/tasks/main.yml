@@ -1,0 +1,10 @@
+---
+# Main file for tasks. It will call different tasks depending on conditions (this is just an example of course).
+
+# Execute task1 if the OS is part of the Debian family (Debian, Ubuntu, etc...)
+- include: task1.yml
+  when: ansible_os_family == "Debian"
+
+# Execute task2 if the OS is part of the Red Hat family (Red Hat Enterprise, CentOS, etc...)
+- include: task2.yml
+  when: ansible_os_family == "Red Hat"

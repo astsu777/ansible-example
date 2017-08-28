@@ -1,0 +1,15 @@
+---
+# This file contains multiple tasks that will define what this role is actually doing
+- name: Small description of the task
+  copy:
+    src: file1
+    dest: /etc/file2
+
+- name: Small description for this 2nd task
+  copy:
+    src: file2
+    dest: /etc/apt/apt.conf.d/file2.conf
+    force: yes
+    owner: root
+    group: root
+    mode: 0644

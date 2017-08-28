@@ -1,0 +1,8 @@
+---
+# Playbook for all database servers
+- hosts: db_srv
+  user: "{{ user }}"
+  become: true
+
+  roles: 
+   - { role: database, tags: [ 'database' ] }

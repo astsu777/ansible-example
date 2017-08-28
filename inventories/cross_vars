@@ -1,0 +1,4 @@
+---
+# These variables are shared amongst all inventories and stored in clear text
+
+variable1: value1

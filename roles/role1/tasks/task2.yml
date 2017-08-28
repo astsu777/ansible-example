@@ -1,0 +1,62 @@
+---
+- name: (APT) Install 'APT'
+  apt:
+    name: aptitude
+    state: latest
+    update_cache: yes
+
+- name: (APT) Configure the 'sources.list' file
+  template:
+    src: sources.list
+    dest: /etc/apt/sources.list
+    force: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: (APT) Update the APT repositories & the system
+  apt:
+    update_cache: yes
+    upgrade: yes
+
+- name: (APT) Install recommended packages
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - unattended-upgrades
+    - apt-listchanges
+    - apt-transport-https
+    - apticron
+
+- name: (APT) Configure Unattended-upgrades
+  template:
+    src: 50unattended-upgrades
+    dest: /etc/apt/apt.conf.d/50unattended-upgrades
+    force: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: (APT) Configure Auto-upgrades
+  copy:
+    src: 20auto-upgrades
+    dest: /etc/apt/apt.conf.d/20auto-upgrades
+    force: yes
+    owner: root
+    group: root
+    mode: 0644
+
+- name: (APT) Configure APT-ListChanges email notification
+  lineinfile:
+    path: /etc/apt/listchanges.conf
+    state: present
+    regexp: '^email_address'
+    line: email_address={{ apt_email_address }}
+    
+- name: (APT) Configure APTiCron email notification
+  lineinfile:
+    path: /etc/apticron/apticron.conf
+    state: present
+    regexp: '^EMAIL'
+    line: EMAIL="{{ apt_email_address }}"

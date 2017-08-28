@@ -1,0 +1,5 @@
+---
+# These variables are specific for the host 10.2.1.35
+
+# For example, let's define the hostname of the server
+hostname: myserver.domain.com
